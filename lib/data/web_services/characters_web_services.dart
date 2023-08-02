@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter_breaking/constants/strings.dart';
-import 'package:flutter_breaking/data/models/character/character.dart';
 import 'package:http/http.dart' as http;
 
 class CharacterWebServies {
