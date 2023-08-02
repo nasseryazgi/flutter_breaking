@@ -5,16 +5,15 @@ import 'package:flutter_breaking/constants/colors.dart';
 import '../../data/models/character/character.dart';
 
 class CharacterItem extends StatelessWidget {
-  const CharacterItem({Key? key,  required this.character}) : super(key: key);
-final Character character;
+  const CharacterItem({Key? key, required this.character}) : super(key: key);
+  final Character character;
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: const EdgeInsetsDirectional.
-      fromSTEB(8, 8, 8, 8),
+      margin: const EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
       padding: const EdgeInsetsDirectional.all(4),
-      decoration:  BoxDecoration(
+      decoration: BoxDecoration(
         color: MyColors.myGrey,
         borderRadius: BorderRadius.circular(15),
       ),
@@ -40,11 +39,11 @@ final Character character;
             color: MyColors.myGrey,
             child: character.image!.isNotEmpty
                 ? FadeInImage.assetNetwork(
-                height: double.infinity,
-                width: double.infinity,
-                fit: BoxFit.cover,
-                placeholder: 'assets/images/loading.gif',
-                image: character.image!)
+                    height: double.infinity,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                    placeholder: 'assets/images/loading.gif',
+                    image: character.image!)
                 : const CircularProgressIndicator()),
       ),
     );

@@ -4,7 +4,7 @@ import 'package:flutter_breaking/business_logic/cubit/cubit/character_cubit.dart
 import 'package:flutter_breaking/constants/strings.dart';
 import 'package:flutter_breaking/data/repository/characters_repository.dart';
 import 'package:flutter_breaking/data/web_services/characters_web_services.dart';
-import 'package:flutter_breaking/presentation/screens/character_details_Screen.dart';
+import 'package:flutter_breaking/presentation/screens/character_details_screen.dart';
 import 'package:flutter_breaking/presentation/screens/characters_screen.dart';
 
 class AppRouter {
