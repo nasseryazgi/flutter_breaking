@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_breaking/constants/colors.dart';
 
@@ -86,11 +87,28 @@ color: Colors.yellow,
                     buildDivider(320),
                     characterInfo('Species :' ,character.species!),
                     buildDivider(320) ,
-                    SizedBox(height: 20,)
+                Center(
+                  child: SizedBox(
+                    width: 250.0,
+                    child: DefaultTextStyle(
+                      style: const TextStyle(
+                        fontSize: 30.0,
+                        fontFamily: 'Agne',
+                      ),
+                      child: AnimatedTextKit(
+                        animatedTexts: [
+                          TypewriterAnimatedText(
+                              'Characters Application Done By :  Nasser Yazgi'),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                    const SizedBox(height: 20,)
                   ],
                 ),
               ),
-              SizedBox(height: 300,)
+              SizedBox(height: 500,)
 
             ]
           ))

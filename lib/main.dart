@@ -9,7 +9,6 @@ void main() {
     appRouter: AppRouter(),
   ));
 
-  // runApp(Test());
 }
 
 class BreakingBadApp extends StatelessWidget {
@@ -25,23 +24,4 @@ class BreakingBadApp extends StatelessWidget {
 }
 
 
-class Test extends StatelessWidget {
-  const Test({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: GestureDetector(
-        onTap: (){
-          CharacterRepoitory characterRepoitory = CharacterRepoitory(characterWebServies: CharacterWebServies());
-          var result = characterRepoitory.characters;
-          print(result.length);
-
-          for(var item in result){
-            print(item.id);
-          }
-        },child: Text('click'),
-      ),
-    );
-  }
-}
