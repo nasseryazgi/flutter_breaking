@@ -7,6 +7,8 @@ import 'package:flutter_breaking/data/web_services/characters_web_services.dart'
 import 'package:flutter_breaking/presentation/screens/character_details_screen.dart';
 import 'package:flutter_breaking/presentation/screens/characters_screen.dart';
 
+import 'data/models/character/character.dart';
+
 class AppRouter {
   Route? generatRouter(RouteSettings settings) {
     switch (settings.name) {
@@ -20,8 +22,9 @@ class AppRouter {
                 ));
 
       case characterDetailsScreen:
+        final character = settings.arguments as Character ;
         return MaterialPageRoute(
-            builder: (_) => const CharacterDetailsScreen());
+            builder: (_) =>  CharacterDetailsScreen(character : character));
     }
   }
 }
