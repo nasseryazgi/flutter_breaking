@@ -23,10 +23,8 @@
 # :iphone: Screens
  ## :house: Home Screen
 
-- Used Dio to fetch data.
-
-
-![hh](https://user-images.githubusercontent.com/38296077/126984656-315e6b82-5dd2-42f8-9146-d4e37cbf4e38.jpeg)
+- Used Http to fetch data.
+![image](https://github.com/nasseryazgi/flutter_breaking/assets/85821198/9a96759a-f88a-4556-8450-6b57725bc919)
 
 - Filter list by searching character's name.
 
