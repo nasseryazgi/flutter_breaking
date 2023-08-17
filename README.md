@@ -29,6 +29,7 @@
 - Filter list by searching character's name.
 
 
+![image](https://github.com/nasseryazgi/flutter_breaking/assets/85821198/7c6657cd-d58a-4c25-9106-018c6eceb40f)
 
 
 - Check internet connection
@@ -44,12 +45,3 @@
 ![fdfsf](https://user-images.githubusercontent.com/38296077/126984994-64da4f86-ea59-4df7-98dc-14df0822ae41.jpeg)
 
 - Some Slivers also.
-
-
-
-## YouTube ![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCYiZceCCbaRLP27U5RXRHog?label=Omar%20Ahmed&style=social) : 
-
-https://youtube.com/playlist?list=PLwWuxCLlF_ufA0GYYjlx_R4smekKH_AuB
-
-
-![Capture](https://user-images.githubusercontent.com/38296077/126990273-788d5756-d696-43d5-9b43-3a360664e7e4.JPG)
