@@ -29,7 +29,6 @@
 - Filter list by searching character's name.
 
 
-![hhhg](https://user-images.githubusercontent.com/38296077/126984677-644fabb8-76ea-48a9-a6eb-d5901bcb85cb.jpeg)
 
 
 - Check internet connection
@@ -46,7 +45,6 @@
 
 - Some Slivers also.
 
-![dsad](https://user-images.githubusercontent.com/38296077/126985335-dea9eaa5-0c2d-4edd-89ac-466dc1c33f93.jpeg)
 
 
 ## YouTube ![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCYiZceCCbaRLP27U5RXRHog?label=Omar%20Ahmed&style=social) : 
