@@ -14,14 +14,14 @@
 
 
 
-- I found this free API : https://breakingbadapi.com/documentation
+- I found this free API : [https://breakingbadapi.com/documentation](https://rickandmortyapi.com/)
 
 
 
 
 
 # :iphone: Screens
- ## :house: Home Screen
+ ## :ho use: Home Screen
 
 - Used Http to fetch data.
 ![image](https://github.com/nasseryazgi/flutter_breaking/assets/85821198/9a96759a-f88a-4556-8450-6b57725bc919)
