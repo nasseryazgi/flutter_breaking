@@ -4,6 +4,7 @@ import 'package:flutter_breaking/business_logic/cubit/cubit/character_cubit.dart
 import 'package:flutter_breaking/constants/colors.dart';
 import 'package:flutter_breaking/presentation/widgets/character_item.dart';
 import 'package:flutter_offline/flutter_offline.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../data/models/character/character.dart';
 import '../widgets/show_loading_indicator.dart';
@@ -117,64 +118,67 @@ class _CharactersScreenState extends State<CharactersScreen> {
           centerTitle: true,
         ),
         body: OfflineBuilder(
-            connectivityBuilder: (BuildContext context,
-            ConnectivityResult connectivity, Widget child) {
-          final bool connected = connectivity != ConnectivityResult.none;
-          if (connected) {
-            return BlocBuilder<CharacterCubit, CharacterState>(
-              builder: (context, state) {
-                if (state is CharacterLoaded) {
-                  allCharacters = (state).characterlist;
-                  return SingleChildScrollView(
-                    child: Container(
-                      color: MyColors.myGrey,
-                      child: Column(
-                        children: [
-                          GridView.builder(
-                              gridDelegate:
-                                  const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 2,
-                                childAspectRatio: 2 / 3,
-                                crossAxisSpacing: 1,
-                                mainAxisSpacing: 1,
-                              ),
-                              shrinkWrap: true,
-                              itemCount: textEditingController.text.isEmpty
-                                  ? allCharacters.length
-                                  : searchedForCharacter.length,
-                              physics: const ClampingScrollPhysics(),
-                              itemBuilder: (context, index) {
-                                return CharacterItem(
-                                    character:
-                                        textEditingController.text.isEmpty
-                                            ? allCharacters[index]
-                                            : searchedForCharacter[index]);
-                              }),
-                        ],
+          connectivityBuilder: (BuildContext context,
+              ConnectivityResult connectivity, Widget child) {
+            final bool connected = connectivity != ConnectivityResult.none;
+            if (connected) {
+              return BlocBuilder<CharacterCubit, CharacterState>(
+                builder: (context, state) {
+                  if (state is CharacterLoaded) {
+                    allCharacters = (state).characterlist;
+                    return SingleChildScrollView(
+                      child: Container(
+                        width: MediaQuery.of(context).size.width / 3,
+                        height: MediaQuery.of(context).size.height / 3,
+                        color: MyColors.myGrey,
+                        child: Column(
+                          children: [
+                            GridView.builder(
+                                gridDelegate:
+                                    const SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2,
+                                  childAspectRatio: 2 / 3,
+                                  crossAxisSpacing: 1,
+                                  mainAxisSpacing: 1,
+                                ),
+                                shrinkWrap: true,
+                                itemCount: textEditingController.text.isEmpty
+                                    ? allCharacters.length
+                                    : searchedForCharacter.length,
+                                physics: const ClampingScrollPhysics(),
+                                itemBuilder: (context, index) {
+                                  return CharacterItem(
+                                      character:
+                                          textEditingController.text.isEmpty
+                                              ? allCharacters[index]
+                                              : searchedForCharacter[index]);
+                                }),
+                          ],
+                        ),
                       ),
-                    ),
-                  );
-                } else {
-                  return const ShowLoadingIndicator();
-                }
-              },
-            );
-          } else {
-            return  Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const SizedBox(
-                  height: 100,
-                ),
-
-                 const Text(
-                  ' turn off your internet.',  style: TextStyle(fontSize: 22, color: MyColors.myGrey),
-                ),
-
-                Image.asset('assets/images/no_internet.png')
-              ],
-            );
-          }
-        },child: const ShowLoadingIndicator(),));
+                    );
+                  } else {
+                    return const ShowLoadingIndicator();
+                  }
+                },
+              );
+            } else {
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const SizedBox(
+                    height: 100,
+                  ),
+                  Text(
+                    ' turn off your internet.',
+                    style: TextStyle(fontSize: 22.sp, color: MyColors.myGrey),
+                  ),
+                  Image.asset('assets/images/no_internet.png')
+                ],
+              );
+            }
+          },
+          child: const ShowLoadingIndicator(),
+        ));
   }
 }

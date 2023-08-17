@@ -1,7 +1,6 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_breaking/data/models/character/character.dart';
 import 'package:flutter_breaking/data/repository/characters_repository.dart';
-import 'package:meta/meta.dart';
 
 part 'character_state.dart';
 
@@ -13,7 +12,6 @@ class CharacterCubit extends Cubit<CharacterState> {
   List<Character> getAllCharacters() {
     characterRepoitory.getCharacters().then((characters) {
       emit(CharacterLoaded(characterlist: characters));
-
       character = characters;
     });
     return character;

@@ -11,7 +11,7 @@ class CharacterWebServies {
       var character = jsonDecode(response.body);
       return character;
     } catch (e) {
-      print(e.toString());
+   //   print(e.toString());
       var character = jsonDecode(response.body);
       return character;
     }
